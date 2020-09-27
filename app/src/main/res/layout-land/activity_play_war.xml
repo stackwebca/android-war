@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewPlayWar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsword"
+    tools:context="com.jrsm.war.playWar">
+
+    <ImageView
+        android:id="@+id/triviaBonus"
+        android:layout_width="733dp"
+        android:layout_height="411dp"
+        android:onClick="openTrivia"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/triviabonus"
+        tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/aCard1"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/aCard2"
+        app:srcCompat="@drawable/red_back" />
+
+    <ImageView
+        android:id="@+id/pCard1"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pCard2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gray_back" />
+
+    <Button
+        android:id="@+id/quitBtn"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/surrender"
+        android:onClick="surrender"
+        android:textColor="#D50000"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintStart_toEndOf="@+id/aCard2"
+        app:layout_constraintTop_toBottomOf="@+id/arrow" />
+
+    <Button
+        android:id="@+id/aboutBtn"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/gameinfo"
+        android:onClick="gameInfo"
+        app:layout_constraintEnd_toStartOf="@+id/aCard1"
+        app:layout_constraintStart_toEndOf="@+id/arrow"
+        app:layout_constraintTop_toTopOf="@+id/quitBtn" />
+
+    <ImageView
+        android:id="@+id/gameLogo"
+        android:layout_width="235dp"
+        android:layout_height="74dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gametitle" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="172dp"
+        android:layout_height="123dp"
+        android:onClick="tapDeck"
+        app:layout_constraintBottom_toTopOf="@+id/triviaBonus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pscore"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/jrsm" />
+
+    <ImageView
+        android:id="@+id/pCard2"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pCard1"
+        app:layout_constraintTop_toBottomOf="@+id/gameLogo"
+        app:srcCompat="@drawable/gray_back" />
+
+    <ImageView
+        android:id="@+id/aCard2"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/aCard1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pCard1"
+        app:srcCompat="@drawable/red_back" />
+
+    <TextView
+        android:id="@+id/pscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:hint="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/pCard1"
+        app:layout_constraintTop_toTopOf="@+id/pCard1" />
+
+    <TextView
+        android:id="@+id/pScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Score"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/pscore"
+        app:layout_constraintEnd_toEndOf="@+id/pscore"
+        app:layout_constraintStart_toStartOf="@+id/pscore"
+        tools:text="Player Score" />
+
+    <TextView
+        android:id="@+id/aScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Score"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/ascore"
+        app:layout_constraintEnd_toEndOf="@+id/ascore"
+        app:layout_constraintStart_toStartOf="@+id/ascore"
+        tools:text="Android Score" />
+
+    <TextView
+        android:id="@+id/ascore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:hint="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/pCard2"
+        app:layout_constraintTop_toTopOf="@+id/pCard2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

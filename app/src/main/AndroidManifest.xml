@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jrsm.blackjack">
+
+    <uses-permission android:name="android.permission.INTERNET" ></uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" ></uses-permission>
+
+
+
+    <application
+        android:name="controller.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:label="War"
+        android:roundIcon="@mipmap/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.jrsm.war.Trivia"></activity>
+        <activity android:name="com.jrsm.war.ContactUs" />
+        <activity android:name="com.jrsm.war.aboutPage" />
+        <activity android:name="com.jrsm.war.playWar" />
+        <activity android:name="com.jrsm.war.MainActivity" />
+        <activity android:name="com.jrsm.war.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
